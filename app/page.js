@@ -1,9 +1,16 @@
-import Image from "next/image";
+import React from 'react';
+import Login from './login';
 
-export default function Home() {
+
+
+const App = () => {
   return (
-   <main>
-    This is for Software Prototype
-   </main>
+  <div>
+    <Login/>
+  </div>
   );
 }
+//const correctUsername = 'user';
+//const correctPassword = 'pass';
+
+export default App;

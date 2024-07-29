@@ -1,0 +1,65 @@
+/* YourStyles.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Ensures padding is included in the element’s total width and height */
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+    color: #333; /* Set color for the heading */
+  }
+  
+  .container label {
+    color: #555; /* Set color for labels */
+    display: block; /* Ensure labels are block elements */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Border color for input fields */
+    border-radius: 5px;
+    color: #333; /* Text color inside the input fields */
+    background-color: #fff; /* Background color for input fields */
+  }
+  
+  .container input::placeholder {
+    color: #999; /* Placeholder text color */
+  }
+  
+  .container input:focus {
+    border-color: #4CAF50; /* Border color when the input is focused */
+    outline: none; /* Remove default outline */
+  }
+  
+  .container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white; /* Set color for button text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container button:hover {
+    background-color: #45a049;
+  }
+  
+  .container p {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
