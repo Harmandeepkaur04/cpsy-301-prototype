@@ -1,6 +1,9 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import './styles.css';
+import CreateAccount from './account';
+
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -8,6 +11,7 @@ const Login = () => {
   const [isLocked, setIsLocked] = useState(false);
   const [lockoutTime, setLockoutTime] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
+  const [isLoginPage, setIsLoginPage] = useState(true); // State to toggle between pages
 
 
   const correctUsername = 'user';
@@ -56,9 +60,16 @@ const Login = () => {
     }
   };
 
+  const togglePage = () => {
+    setIsLoginPage(prevPage => !prevPage);
+  };
+
   return (
     <div className='container'>
+      {isLoginPage ? (
+        <>
       <h2 >Login</h2>
+      
       <form onSubmit={handleLogin}>
         <div>
           <label className='' >Username: </label>
@@ -79,9 +90,18 @@ const Login = () => {
           />
         </div>
         <button type="submit" disabled={isLocked}>Login</button>
+
+        {errorMessage && <p className='error'>{errorMessage}</p>}
+
+        <p>Don't have an account? <button onClick={togglePage}>Sign Up</button></p>
       </form>
-      {errorMessage && <p>{errorMessage}</p>}
+     
+      </>
+      ):(
+    <CreateAccount togglePage={togglePage}/>
+      )}
     </div>
+
   );
 };
 

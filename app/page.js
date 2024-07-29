@@ -1,9 +1,12 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Login from './login';
+import CreateAccount from './account';
 
 
 
 const App = () => {
+  
   return (
   <div>
     <Login/>
